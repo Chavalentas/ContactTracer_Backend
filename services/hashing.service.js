@@ -1,8 +1,9 @@
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 
 
 const hash = function(passWord){
-    return bcrypt.hashSync(passWord,10);
+    var salt = bcrypt.genSaltSync(10);
+    return bcrypt.hashSync(passWord,salt);
 }
 
 const isValid = async function(plainTextPassword, hashedPassword){
