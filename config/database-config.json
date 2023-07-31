@@ -1,0 +1,7 @@
+{
+    "databaseName": "contact_tracing_db",
+    "databaseCollections": [
+        "users",
+        "entries"
+    ]
+}
